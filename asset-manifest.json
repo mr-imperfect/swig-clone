@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/swig-clone/static/css/main.a8623e8c.chunk.css",
+    "main.js": "/swig-clone/static/js/main.d44a6705.chunk.js",
+    "main.js.map": "/swig-clone/static/js/main.d44a6705.chunk.js.map",
+    "runtime-main.js": "/swig-clone/static/js/runtime-main.f64c68bf.js",
+    "runtime-main.js.map": "/swig-clone/static/js/runtime-main.f64c68bf.js.map",
+    "static/js/2.406b16aa.chunk.js": "/swig-clone/static/js/2.406b16aa.chunk.js",
+    "static/js/2.406b16aa.chunk.js.map": "/swig-clone/static/js/2.406b16aa.chunk.js.map",
+    "static/js/3.6a798541.chunk.js": "/swig-clone/static/js/3.6a798541.chunk.js",
+    "static/js/3.6a798541.chunk.js.map": "/swig-clone/static/js/3.6a798541.chunk.js.map",
+    "index.html": "/swig-clone/index.html",
+    "static/css/main.a8623e8c.chunk.css.map": "/swig-clone/static/css/main.a8623e8c.chunk.css.map",
+    "static/js/2.406b16aa.chunk.js.LICENSE.txt": "/swig-clone/static/js/2.406b16aa.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/swig-clone/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f64c68bf.js",
+    "static/js/2.406b16aa.chunk.js",
+    "static/css/main.a8623e8c.chunk.css",
+    "static/js/main.d44a6705.chunk.js"
+  ]
+}
