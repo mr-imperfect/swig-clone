@@ -1,0 +1,98 @@
+@import "../../../src/sass/mixins";
+@import "../../../src/sass/variables";
+.signup {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  form {
+    .signup-password{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i{
+        cursor: pointer;
+      }
+      #passwordshoworhideopen{
+        display: none;
+      }
+      #passwordshoworhideopen.enable{
+        display: block;
+      }
+    }
+    .signup-heading {
+      h3 {
+        margin-top: -10px;
+        font-size: 22px;
+      }
+    }
+    height: 90vh;
+    width: 400px;
+    @include respond-below(sm) {
+      width: 300px;
+    }
+
+    padding: 50px 30px;
+    border: 1px solid rgba(17, 17, 17, 0.158);
+    box-shadow: 3px 6px 6px rgba(17, 17, 17, 0.096);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .signupcommon {
+      
+      position: relative;
+      label {
+        position: absolute;
+        top: 26px;
+        left: 20px;
+        font-size: 20px;
+        transition: 0.5s ease-in-out;
+        & ~ i{
+         margin-right: -12px;
+         margin-top: 20px;
+        }
+      }
+      input {
+        margin: 15px;
+        width: 300px;
+        font-size: 21px;
+        @include respond-below(sm){
+          width: 200px;
+        }
+        padding: 8px 15px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $primary-color;
+        &:focus ~ label,
+        &:valid ~ label {
+          font-size: 18px;
+          top: -4px;
+          color: $primary-color;
+        }
+      }
+    }
+    .signup-button {
+      button {
+        outline: none;
+        border: none;
+        padding: 14px 28px;
+        border-radius: 5px;
+        background-color: $primary-color;
+        font-size: 22px;
+        cursor: pointer;
+        color: white;
+      }
+    }
+    .signup-image {
+      img {
+        margin-top: -30px;
+        max-width: 200px;
+        height: auto;
+    
+      }
+    }
+  }
+}
