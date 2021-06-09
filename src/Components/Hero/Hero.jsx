@@ -6,6 +6,7 @@ function Hero(props) {
    
     return (
         <div className="hero">
+            <h1>Special dishes</h1>
 
             <div className="hero-card">
                 

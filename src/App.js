@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import LottieControl from './Components/Preloader/Preloader';
 import Home from './Pages/Home/Home';
+import Category from './Components/Category/Category';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       
       <Route path="/login"><Login/></Route>
       <Route path="/home"><Home/></Route>
+      <Route path="/category"><Category/></Route>
 
       </Router>
      

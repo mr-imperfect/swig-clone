@@ -1,6 +1,16 @@
 import React from 'react'
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom'
 import './Header.css'
 function Header() {
+    const showhide=()=>{
+       let hii=document.querySelector('.hii')
+       hii.classList.add('visible')
+    }
+    const hideshow=()=>{
+        let hii=document.querySelector('.hii')
+        hii.classList.remove('visible')
+
+    }
     return (
         <div className="header">
             <div className="header-left">
@@ -10,11 +20,24 @@ function Header() {
             </div>
             <div className="header-right">
                 <ul>
-                    <li>Search</li>
+                   <Link style={{textDecoration:"none"}} to="/category"> <li>Search</li></Link>
                     <li>Offers</li>
                     <li>help</li>
                     <li>user</li>
+                    
                 </ul>
+                <i id="ham" onClick={showhide} class="ri-menu-3-fill"></i>
+                <ul className="hii">
+                <i onClick={hideshow} class="fas fa-times-circle"></i>
+
+                   <Link style={{textDecoration:"none"}} to="/category"> <li>Search</li></Link>
+                    <li>Offers</li>
+                    <li>help</li>
+                    <li>user</li>
+                   
+                </ul>
+
+                
 
             </div>
             

@@ -1,15 +1,28 @@
 @import '../../sass/mixins';
 @import '../../sass/variables';
 .header{
-
+    position: fixed;
+    background-color: rgb(21, 22, 19);
+    width: 100%;
+    top: 0;
+    // right: 0;
+    // left: 0;
+    margin: auto;
+    padding: 0px 70px;
     display: flex;
-   margin: auto;
+    color: white;
+   
     height: 75px;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
+    // width: 60%;
     @include respond-below(md){
-        width:80%;
+        width:100%;
+        padding: 0px 50px;
+    }
+    @include respond-below(sm){
+        padding: 0px 1
+        00px 0px 50px;
     }
     .header-left{
         .logo{
@@ -21,16 +34,94 @@
         }
     }
     .header-right{
-        ul{
+        i{
+            display: none;
+            font-size: 25px;
+            color: $primary-color;
+            @include respond-below(md){
+                display: block;
+                margin-left: 200px;
+            }
+
+        }
+        
+       ul{
             display: flex;
+           
+            @include respond-below(md){
+                display: none;
+            }
 
             li{
                 list-style: none;
-                margin-left: 40px;
-                @include respond-below(sm){
-                    display: none;
+                margin-left: 35px;
+                font-size: 25px;
+                cursor: pointer;
+                transition: 0.4s ease-in-out;
+              
+                @include respond-below(md){
+                    font-size: 21px;
+                }
+
+                &:hover{
+                    color: $primary-color;
                 }
                 
+            }
+            
+        }
+        .hii{
+            display: none;
+            width: 100%;
+            
+            // @include respond-below(sm){
+            //     display: block;
+                
+            // }
+            &.visible{
+                position: absolute;
+                color: white;
+                top: 0;
+                left: 0;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: space-evenly;
+               min-height: 100vh;
+               width: 100%;
+               overflow: hidden;
+               background-color: rgb(19, 18, 18);
+               backdrop-filter: blur(5px);
+               z-index: 9999999999;
+             
+             animation:moveleft 0.5s linear ;
+            
+              
+             
+            }
+            @keyframes moveleft{
+                0%{
+                    transform: translate(100%);
+                }
+                100%{
+                    transform: translate(0%);
+                }
+            }
+
+        }
+        .fas{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            animation:moveright 0.5s linear;
+            
+        }
+        @keyframes moveright{
+            0%{
+                transform: translate(0%);
+            }
+            100%{
+                transform: translate(100%);
             }
         }
     }
