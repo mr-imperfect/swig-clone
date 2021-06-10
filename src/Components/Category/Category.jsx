@@ -3,12 +3,15 @@ import './Category.css'
 import axios from 'axios'
 import Preloader from '../Preloader/Preloader'
 import Preloader2 from '../Preloader2/Preloader2'
+import Popup from '../Popup/Popup'
 function Category() {
     const [category,setCategory]=useState([])
     const [categorywise,setCategorywise]=useState([])
     const [loading,setLoading]=useState(true)
     const [cat,setCat]=useState()
     const [active,setActive]=useState("")
+    const [showpopup,setShowpopup]=useState(false)
+    const [selectedpopup,setSelectedpopup]=useState({})
     useEffect(() => {
         axios.get('https://www.themealdb.com/api/json/v1/1/categories.php').then((response)=>{
             console.log('category',response.data.categories);
@@ -17,9 +20,14 @@ function Category() {
         })
        
     }, [])
-    
-    const showCategoryWise=(category)=>{
+    function removepopup(){
+        setShowpopup(false)
+    }
 
+    
+   
+    const showCategoryWise=(category)=>{
+        
         setActive(category)
         setCat(true)
         axios.get('https://www.themealdb.com/api/json/v1/1/search.php?f=c').then((response)=>{
@@ -33,8 +41,8 @@ function Category() {
             }).map((item)=>{
 
                 return (
-                    <div className="categorized-assets">
-                        <img src={item.strMealThumb} alt="" />
+                    <div className="categorized-assets" >
+                        <img  onClick={()=>setpopup(item.strMeal,item.strMealThumb)} src={item.strMealThumb} alt="" />
                         <h4>{item.strMeal}</h4>
                     </div>
                 )
@@ -59,15 +67,24 @@ function Category() {
       
         })
 
+const setpopup=(itemname,itemimage)=>{
+    setShowpopup(true)
+    setSelectedpopup({itemname,itemimage})
+    console.log('jii',showpopup);
+   
+}
 
-
-        console.log(active);
+        
 
     }
+    
     return (
         <div className="category">
+           
+            
             <h2>choose a category</h2>
             <div className="categories">
+            {showpopup && <Popup selectedpopup={selectedpopup} removepopup={removepopup} />}
             {
                 !loading? 
                 category.map((cat)=>{

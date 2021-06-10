@@ -26,9 +26,14 @@ function Header() {
                     <li>user</li>
                     
                 </ul>
-                <i id="ham" onClick={showhide} class="ri-menu-3-fill"></i>
+                {/* <i id="ham" onClick={showhide} class="ri-menu-3-fill"></i>
+                 */}
+                 <i id="ham" onClick={showhide} class="fas fa-bars"></i>
+                
+
                 <ul className="hii">
-                <i onClick={hideshow} class="fas fa-times-circle"></i>
+                <i onClick={hideshow} class="fas fa-times-circle kel"></i>
+                
 
                    <Link style={{textDecoration:"none"}} to="/category"> <li>Search</li></Link>
                     <li>Offers</li>
